@@ -32,4 +32,9 @@ if ( isset($atts['class']) ) {
 	$atts['class'] = str_replace( 'wp-block-rs-font-awesome-5-rs-icon', '', $atts['class'] );
 }
 
+// If not yet specified, use the "flag-alt" as default
+if ( ! $icon_key && $is_preview ) {
+	$icon_key = 'flag-alt';
+}
+
 echo RS_Font_Awesome_5_Icons::get_icon_html( $icon_key, $style, $title, $color, $color_2, $atts );
