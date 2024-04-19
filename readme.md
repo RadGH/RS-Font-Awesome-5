@@ -72,5 +72,8 @@ This plugin supports Font Awesome 5.15.4. All styles are supported, which curren
 
 ## Changelog
 
+### 1.0.1
+* Added default icon if none is specified
+
 ### 1.0.0
 * Initial release
