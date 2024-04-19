@@ -1,0 +1,7 @@
+Each metadata file is created using the script found here:
+
+https://www.dropbox.com/scl/fo/o2uiom8pexly7b2jhvdl9/AESTV3mX3mOtY-UWsXWQjQ0?rlkey=hl9ofq7ytvvejo6tc9h09zc1z&dl=0
+
+This script accepts a metadata file from Font Awesome 5 or 6 and removes unnecessary information,
+such as the SVG path data, and adds additional information, such as the Unicode code point and the
+name of the icon. The script converts the output to a JSON format.

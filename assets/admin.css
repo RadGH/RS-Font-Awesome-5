@@ -1,0 +1,73 @@
+/* ACF custom classes rs 1.0.1 */
+.acf-field.acf-hide-label > .acf-label,
+.acf-field.acf-hide-label.acf-field-clone .acf-clone-fields > .acf-field > .acf-label,
+.acf-field.acf-hide-label.acf-field-group > .acf-input > .acf-fields > .acf-field > .acf-label {
+	display: none;
+}
+
+.acf-field.acf-no-padding > .acf-input > .acf-fields > .acf-field {
+	padding: 0;
+}
+
+.acf-field.acf-no-side-padding > .acf-input > .acf-fields > .acf-field {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.acf-field.acf-no-border,
+.acf-field.acf-no-border > .acf-input > .acf-fields {
+	border: none;
+}
+
+.acf-field.acf-no-margin {
+	margin: 0 !important;
+}
+/* End: ACF custom classes */
+
+/*
+ * Icon select
+ * Font Awesome 5 Icon block -> Icon select (ACF)
+ */
+:where( .rs-fa5-field-icon .select2-selection, .select2-results__options:has(.rs-fa5-icon) ) .rs-fa5-icon {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	gap: 0.5em;
+}
+
+:where( .rs-fa5-field-icon .select2-selection, .select2-results__options:has(.rs-fa5-icon) ) .rs-fa5-icon .icon-tag {
+	text-align: center;
+}
+
+.select2-results__options:has(.rs-fa5-icon) .rs-fa5-icon {
+	gap: 1em;
+}
+
+.select2-results__options:has(.rs-fa5-icon) .rs-fa5-icon .icon-tag {
+	font-size: 24px;
+	min-width: 30px;
+}
+/* End: Icon select */
+
+/*
+ * Color select
+ * Font Awesome 5 Icon block -> Color select (ACF)
+ * Font Awesome 5 Icon block -> Color 2 select (ACF)
+ */
+:where( .rs-fa5-field-color .select2-selection, .select2-results__options:has(.rs-fa5-color) ) .rs-fa5-color {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	gap: 0.5em;
+	align-items: center;
+}
+
+:where( .rs-fa5-field-color .select2-selection, .select2-results__options:has(.rs-fa5-color) ) .rs-fa5-color .color-tag {
+	width: 1em;
+	height: 1em;
+	border-radius: 3px;
+}
+
+:where( .rs-fa5-field-color .select2-selection, .select2-results__options:has(.rs-fa5-color) ) .rs-fa5-color .color-value {
+	opacity: 0.4;
+}
+/* End: Color select */

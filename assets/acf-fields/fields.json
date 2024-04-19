@@ -1,0 +1,652 @@
+[
+    {
+        "key": "group_6621635586e40",
+        "title": "RS Font Awesome 5 Icon Block",
+        "fields": [
+            {
+                "key": "field_6621640b2ed0c",
+                "label": "Icon",
+                "name": "icon",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "rs-fa5-field-icon",
+                    "id": ""
+                },
+                "choices": [],
+                "default_value": false,
+                "return_format": "value",
+                "multiple": 0,
+                "allow_null": 0,
+                "ui": 1,
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_6622853ad455e",
+                "label": "Style",
+                "name": "style",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "regular": "Regular (far)",
+                    "solid": "Solid (fas)",
+                    "light": "Light (fal)",
+                    "duotone": "Duotone (fad)"
+                },
+                "default_value": false,
+                "return_format": "value",
+                "multiple": 0,
+                "allow_null": 0,
+                "ui": 0,
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_662285f22117c",
+                "label": "Title",
+                "name": "title",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6622858f2117b",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_662298fdb3f48",
+                "label": "Color",
+                "name": "color",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "rs-fa5-field-color",
+                    "id": ""
+                },
+                "choices": [],
+                "default_value": false,
+                "return_format": "value",
+                "multiple": 0,
+                "allow_null": 1,
+                "ui": 1,
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_66229911b3f49",
+                "label": "Color 2",
+                "name": "color_2",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6622853ad455e",
+                            "operator": "==",
+                            "value": "duotone"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "rs-fa5-field-color",
+                    "id": ""
+                },
+                "choices": [],
+                "default_value": false,
+                "return_format": "value",
+                "multiple": 0,
+                "allow_null": 1,
+                "ui": 1,
+                "ajax": 0,
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "rs-font-awesome-5\/rs-icon"
+                }
+            ]
+        ],
+        "menu_order": 5,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "ACF Block (Font Awesome 5 Icon)",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_6621494891ab9",
+        "title": "RS Font Awesome 5",
+        "fields": [
+            {
+                "key": "field_6621494897c6c",
+                "label": "Font Awesome",
+                "name": "fa_enabled",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-hide-label",
+                    "id": ""
+                },
+                "message": "Enable Font Awesome 5",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_6621494897e2a",
+                "label": "Font Awesome Settings",
+                "name": "fa_settings",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_6621494897c6c",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_662149489ee4e",
+                        "label": "Inclusion Method",
+                        "name": "",
+                        "aria-label": "",
+                        "type": "message",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "The Font Awesome web font files are <strong>not<\/strong> included in this plugin due to licensing restrictions. You can include the Font Awesome files in three ways:\r\n\r\n<ul class=\"ul-disc\">\r\n<li><strong>Font Kit:<\/strong> Choose this method if you have a <code>&lt;script&gt;<\/code> tag to load the necessary font files. If your kit supports more than one variation, you only need to add it to the first (select \"none\" for the rest).<\/li>\r\n<li><strong>Font File:<\/strong> Choose this method to upload the font files directly through WordPress. The .woff2 file format supports all major browsers since April 4, 2024. If you need to support older browsers, consider including the full font package in your theme or plugin manually instead.<\/li>\r\n<li><strong>None:<\/strong> Choose this method if the font is already included by another theme or plugin, or if you will include the font in some other way.<\/li>\r\n<\/ul>",
+                        "new_lines": "wpautop",
+                        "esc_html": 0
+                    },
+                    {
+                        "key": "field_662149489ef0f",
+                        "label": "Styles",
+                        "name": "fa_5_styles",
+                        "aria-label": "",
+                        "type": "checkbox",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "regular": "Regular (far)",
+                            "solid": "Solid (fas)",
+                            "light": "Light (fal)",
+                            "duotone": "Duotone (fad)",
+                            "brands": "Brands (fab)"
+                        },
+                        "default_value": [],
+                        "return_format": "value",
+                        "allow_custom": 0,
+                        "layout": "vertical",
+                        "toggle": 0,
+                        "save_custom": 0,
+                        "custom_choice_button_text": "Add new choice"
+                    },
+                    {
+                        "key": "field_662149489ef85",
+                        "label": "Style: Regular",
+                        "name": "fa_5_regular",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_662149489ef0f",
+                                    "operator": "==",
+                                    "value": "regular"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "table",
+                        "sub_fields": [
+                            {
+                                "key": "field_66214948b43aa",
+                                "label": "Include Method",
+                                "name": "include_method",
+                                "aria-label": "",
+                                "type": "radio",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "30",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "kit": "Font Kit",
+                                    "font": "Font File",
+                                    "none": "None"
+                                },
+                                "default_value": "",
+                                "return_format": "value",
+                                "allow_null": 1,
+                                "other_choice": 0,
+                                "layout": "horizontal",
+                                "save_other_choice": 0
+                            },
+                            {
+                                "key": "field_66214948b4413",
+                                "label": "Font Kit",
+                                "name": "font_kit",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_66214948b43aa",
+                                            "operator": "==",
+                                            "value": "kit"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "rows": 2,
+                                "placeholder": "<script src=\"https:\/\/example.com\/your_kit_code.js\" crossorigin=\"anonymous\"><\/script>",
+                                "new_lines": ""
+                            },
+                            {
+                                "key": "field_66214948b4459",
+                                "label": "WOFF2 File",
+                                "name": "woff2_file",
+                                "aria-label": "",
+                                "type": "file",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_66214948b43aa",
+                                            "operator": "==",
+                                            "value": "font"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "library": "all",
+                                "min_size": "",
+                                "max_size": "",
+                                "mime_types": "woff2"
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_662149489f009",
+                        "label": "Style: Solid",
+                        "name": "fa_5_solid",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_662149489ef0f",
+                                    "operator": "==",
+                                    "value": "solid"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "table",
+                        "sub_fields": [
+                            {
+                                "key": "field_66214948ca084",
+                                "label": "Clone from Variation: Regular",
+                                "name": "clone_from_variation_regular",
+                                "aria-label": "",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "field_66214948b43aa",
+                                    "field_66214948b4413",
+                                    "field_66214948b4459"
+                                ],
+                                "display": "seamless",
+                                "layout": "",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_66214ec82e859",
+                        "label": "Style: Light",
+                        "name": "fa_5_light",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_662149489ef0f",
+                                    "operator": "==",
+                                    "value": "light"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "table",
+                        "sub_fields": [
+                            {
+                                "key": "field_66214ec92e85b",
+                                "label": "Clone from Variation: Regular",
+                                "name": "clone_from_variation_regular",
+                                "aria-label": "",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "field_66214948b43aa",
+                                    "field_66214948b4413",
+                                    "field_66214948b4459"
+                                ],
+                                "display": "seamless",
+                                "layout": "block",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_66214f282e845",
+                        "label": "Style: Duotone",
+                        "name": "fa_5_duotone",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_662149489ef0f",
+                                    "operator": "==",
+                                    "value": "duotone"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "table",
+                        "sub_fields": [
+                            {
+                                "key": "field_66214f282e847",
+                                "label": "Clone from Variation: Regular",
+                                "name": "clone_from_variation_regular",
+                                "aria-label": "",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "field_66214948b43aa",
+                                    "field_66214948b4413",
+                                    "field_66214948b4459"
+                                ],
+                                "display": "seamless",
+                                "layout": "",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_66214f362e848",
+                        "label": "Style: Brands",
+                        "name": "fa_5_brands",
+                        "aria-label": "",
+                        "type": "group",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_662149489ef0f",
+                                    "operator": "==",
+                                    "value": "brands"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "layout": "table",
+                        "sub_fields": [
+                            {
+                                "key": "field_66214f362e84a",
+                                "label": "Clone from Variation: Regular",
+                                "name": "clone_from_variation_regular",
+                                "aria-label": "",
+                                "type": "clone",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "clone": [
+                                    "field_66214948b43aa",
+                                    "field_66214948b4413",
+                                    "field_66214948b4459"
+                                ],
+                                "display": "seamless",
+                                "layout": "block",
+                                "prefix_label": 0,
+                                "prefix_name": 0
+                            }
+                        ]
+                    },
+                    {
+                        "key": "field_662149489ee96",
+                        "label": "Support Version 4",
+                        "name": "support_version_4",
+                        "aria-label": "",
+                        "type": "true_false",
+                        "instructions": "Enable this setting if your website uses Font Awesome 4 through any other plugin or theme. This will ensure the Font Awesome 5 icons apply to icons created in the Font Awesome 4 syntax, which uses the class name <code class=\"code>fa<\/code> and fixes certain icons that have an outline variation <code class=\"code\">fa-star-o<\/code>.",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "Add support for older icons from Font Awesome 4.7.0",
+                        "default_value": 0,
+                        "ui": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": ""
+                    },
+                    {
+                        "key": "field_662156f5f73ca",
+                        "label": "Minify",
+                        "name": "minify",
+                        "aria-label": "",
+                        "type": "true_false",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "Use minified CSS styles",
+                        "default_value": 1,
+                        "ui": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": ""
+                    },
+                    {
+                        "key": "field_662160ee59bc4",
+                        "label": "All Styles",
+                        "name": "include_all_styles",
+                        "aria-label": "",
+                        "type": "true_false",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_6621494897c6c",
+                                    "operator": "==",
+                                    "value": "1"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "Include all styles as a single CSS file",
+                        "default_value": 1,
+                        "ui": 0,
+                        "ui_on_text": "",
+                        "ui_off_text": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "rs-font-awesome-5"
+                }
+            ]
+        ],
+        "menu_order": 10,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "Settings > RS Font Awesome 5",
+        "show_in_rest": 0
+    }
+]

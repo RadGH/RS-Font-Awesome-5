@@ -1,0 +1,46 @@
+{
+  "name": "rs-font-awesome-5/rs-icon",
+  "title": "Font Awesome 5 Icon",
+  "description": "Allows you to select an icon from Font Awesome 5.",
+  "style": ["file:./rs-icon.css"],
+  "category": "common",
+  "icon": "admin-appearance",
+  "keywords": [ "icon", "font awesome 5", "font awesome", "fontawesome" ],
+  "supports": {
+    "align": true,
+    "anchor": false,
+    "customClassName": true,
+    "layout": false,
+    "filter": {
+      "duotone": false
+    },
+    "color": {
+      "text": true,
+      "background": false,
+      "link": false
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true,
+      "blockGap": false
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": false,
+      "FontFamily": false,
+      "FontWeight": false,
+      "FontStyle": false,
+      "TextTransform": false,
+      "LetterSpacing": false,
+      "__experimentalFontFamily": false,
+      "__experimentalFontWeight": false,
+      "__experimentalFontStyle": false,
+      "__experimentalTextTransform": false,
+      "__experimentalLetterSpacing": false
+    }
+  },
+  "acf": {
+    "mode": "preview",
+    "renderTemplate": "rs-icon.php"
+  }
+}
