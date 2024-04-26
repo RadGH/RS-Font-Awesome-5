@@ -69,15 +69,7 @@ add_action( 'acf/include_fields', function() {
 				'type' => 'text',
 				'instructions' => '',
 				'required' => 0,
-				'conditional_logic' => array(
-					array(
-						array(
-							'field' => 'field_6622858f2117b',
-							'operator' => '!=',
-							'value' => '1',
-						),
-					),
-				),
+				'conditional_logic' => 0,
 				'wrapper' => array(
 					'width' => '',
 					'class' => '',
@@ -88,6 +80,54 @@ add_action( 'acf/include_fields', function() {
 				'placeholder' => '',
 				'prepend' => '',
 				'append' => '',
+			),
+			array(
+				'key' => 'field_662bda0c4c115',
+				'label' => 'URL',
+				'name' => 'url',
+				'aria-label' => '',
+				'type' => 'text',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'maxlength' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+			),
+			array(
+				'key' => 'field_662bda594c117',
+				'label' => 'New Tab',
+				'name' => 'new_tab',
+				'aria-label' => '',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => array(
+					array(
+						array(
+							'field' => 'field_662bda0c4c115',
+							'operator' => '!=',
+							'value' => '',
+						),
+					),
+				),
+				'wrapper' => array(
+					'width' => '',
+					'class' => 'acf-hide-label',
+					'id' => '',
+				),
+				'message' => 'Open link in new tab',
+				'default_value' => 0,
+				'ui' => 0,
+				'ui_on_text' => '',
+				'ui_off_text' => '',
 			),
 			array(
 				'key' => 'field_662298fdb3f48',

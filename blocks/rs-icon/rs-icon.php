@@ -24,6 +24,9 @@ $title = get_field( 'title', $block['id'] ); // title attribute
 $color = get_field( 'color', $block['id'] ); // Color slug from theme.json
 $color_2 = get_field( 'color_2', $block['id'] ); // Second color, only used for duotone icons
 
+$url = get_field( 'url', $block['id'] ); // URL to link to
+$new_tab = get_field( 'new_tab', $block['id'] ); // Open in new tab
+
 // Get block attributes to add to the element
 $atts = WP_Block_Supports::get_instance()->apply_block_supports();
 
@@ -37,4 +40,15 @@ if ( ! $icon_key && $is_preview ) {
 	$icon_key = 'flag-alt';
 }
 
+// Create a link, but not in the editor
+if ( $url && ! $is_preview ) {
+	echo '<a href="' . esc_url( $url ) . '"';
+	if ( $new_tab ) echo ' target="_blank"';
+	echo '>';
+}
+
 echo RS_Font_Awesome_5_Icons::get_icon_html( $icon_key, $style, $title, $color, $color_2, $atts );
+
+if ( $url && ! $is_preview ) {
+	echo '</a>';
+}

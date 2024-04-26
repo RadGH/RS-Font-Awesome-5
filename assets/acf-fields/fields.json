@@ -62,15 +62,7 @@
                 "type": "text",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_6622858f2117b",
-                            "operator": "!=",
-                            "value": "1"
-                        }
-                    ]
-                ],
+                "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -81,6 +73,54 @@
                 "placeholder": "",
                 "prepend": "",
                 "append": ""
+            },
+            {
+                "key": "field_662bda0c4c115",
+                "label": "URL",
+                "name": "url",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_662bda594c117",
+                "label": "New Tab",
+                "name": "new_tab",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_662bda0c4c115",
+                            "operator": "!=",
+                            "value": ""
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "acf-hide-label",
+                    "id": ""
+                },
+                "message": "Open link in new tab",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             },
             {
                 "key": "field_662298fdb3f48",
