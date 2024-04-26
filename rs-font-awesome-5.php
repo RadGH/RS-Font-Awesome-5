@@ -2,7 +2,7 @@
 /*
 Plugin Name: RS Font Awesome 5
 Description: Enables your theme to use icons from Font Awesome 5. Allows you to include Font Awesome scripts by official kit, or direct font files, or by deferring to another plugin. Icons can be inserted using the Font Awesome 5 Icon block or the [fa5] shortcode.
-Version: 1.0.1
+Version: 1.0.2
 Author: Radley Sustaire
 Author URI: https://radleysustaire.com
 GitHub Plugin URI: https://github.com/RadGH/RS-Font-Awesome-5
@@ -10,7 +10,7 @@ GitHub Plugin URI: https://github.com/RadGH/RS-Font-Awesome-5
 
 define( 'RS_Font_Awesome_5_PATH', __DIR__ );
 define( 'RS_Font_Awesome_5_URL', plugin_dir_url(__FILE__) );
-define( 'RS_Font_Awesome_5_VERSION', '1.0.1' );
+define( 'RS_Font_Awesome_5_VERSION', '1.0.2' );
 
 class RS_Font_Awesome_5 {
 	

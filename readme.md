@@ -72,6 +72,9 @@ This plugin supports Font Awesome 5.15.4. All styles are supported, which curren
 
 ## Changelog
 
+### 1.0.2
+* Added a URL option to the block, with an option to open in new tab
+
 ### 1.0.1
 * Added default icon if none is specified
 
