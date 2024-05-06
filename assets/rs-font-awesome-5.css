@@ -5,6 +5,8 @@
 
 .rs-fa.aligncenter {
 	display: block;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
 }
 
 @supports ( width: fit-content ) {
