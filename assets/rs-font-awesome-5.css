@@ -7,6 +7,7 @@
 	display: block;
 	margin-inline-start: auto;
 	margin-inline-end: auto;
+	text-align: center;
 }
 
 @supports ( width: fit-content ) {
