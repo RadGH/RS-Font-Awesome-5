@@ -72,6 +72,9 @@ This plugin supports Font Awesome 5.15.4. All styles are supported, which curren
 
 ## Changelog
 
+### 1.0.4
+* Added filter to allow WOFF2 and SVG files by extensions and mime type
+
 ### 1.0.3
 * Fixed align center on icons
 
