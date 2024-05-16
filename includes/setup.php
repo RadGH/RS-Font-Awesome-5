@@ -28,7 +28,10 @@ class RS_Font_Awesome_5_Setup {
 		add_action( 'acf/init', array( __CLASS__, 'add_acf_fields' ) );
 		
 		// Allow WordPress to upload WOFF2 and SVG files
-		add_filter( 'upload_mimes', array( __CLASS__, 'allow_woff2_svg_uploads' ) );
+		add_filter( 'upload_mimes', array( __CLASS__, 'allow_woff2_svg_uploads_mimes' ) );
+		
+		// Allow WOFF2 and SVG files to be uploaded
+		add_filter( 'wp_check_filetype_and_ext', array( __CLASS__, 'allow_woff_svg_uploads_ext' ), 10, 4 );
 		
 	}
 	
@@ -124,11 +127,37 @@ class RS_Font_Awesome_5_Setup {
 	 *
 	 * @return array
 	 */
-	public static function allow_woff2_svg_uploads( $mimes ) {
+	public static function allow_woff2_svg_uploads_mimes( $mimes ) {
 		$mimes['woff2'] = 'font/woff2';
 		$mimes['svg'] = 'image/svg+xml';
 		
 		return $mimes;
+	}
+	
+	/**
+	 * Allow WOFF2 and SVG files to be uploaded
+	 *
+	 * @param array $data
+	 * @param string $file
+	 * @param string $filename
+	 * @param array $mimes
+	 *
+	 * @return array
+	 */
+	public static function allow_woff_svg_uploads_ext( $data, $file, $filename, $mimes ) {
+		$filetype = wp_check_filetype( $filename, $mimes );
+		
+		if ( $filetype['ext'] == 'woff2' && $filetype['type'] == 'font/woff2' ) {
+			$data['ext'] = 'woff2';
+			$data['type'] = 'font/woff2';
+		}
+		
+		if ( $filetype['ext'] == 'svg' && $filetype['type'] == 'image/svg+xml' ) {
+			$data['ext'] = 'svg';
+			$data['type'] = 'image/svg+xml';
+		}
+		
+		return $data;
 	}
 	
 	
