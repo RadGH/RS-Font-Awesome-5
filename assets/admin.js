@@ -1,29 +1,28 @@
 (function() {
 
-
 	// Allow ACF select2 to use html markup in the results
-	acf.add_filter('select2_args', function(args) {
-		console.log( 'select2 args', args );
+	if ( typeof acf === 'object' ) {
+		acf.add_filter('select2_args', function(args) {
+			args.templateSelection = function(selection) {
+				var $selection = jQuery('<span class="acf-selection"></span>');
 
-		args.templateSelection = function(selection) {
-			var $selection = jQuery('<span class="acf-selection"></span>');
+				$selection.html(acf.escHtml(selection.text));
+				$selection.data('element', selection.element);
 
-			$selection.html(acf.escHtml(selection.text));
-			$selection.data('element', selection.element);
+				return $selection;
+			}
 
-			return $selection;
-		}
+			args.templateResult = function(selection) {
+				var $selection = jQuery('<span class="acf-selection"></span>');
 
-		args.templateResult = function(selection) {
-			var $selection = jQuery('<span class="acf-selection"></span>');
+				$selection.html(acf.escHtml(selection.text));
+				$selection.data('element', selection.element);
 
-			$selection.html(acf.escHtml(selection.text));
-			$selection.data('element', selection.element);
+				return $selection;
+			}
 
-			return $selection;
-		}
-
-		return args;
-	});
+			return args;
+		});
+	}
 
 })();
