@@ -72,6 +72,9 @@ This plugin supports Font Awesome 5.15.4. All styles are supported, which curren
 
 ## Changelog
 
+### 1.0.5
+* Fixed js error on non-acf pages
+
 ### 1.0.4
 * Added filter to allow WOFF2 and SVG files by extensions and mime type
 
